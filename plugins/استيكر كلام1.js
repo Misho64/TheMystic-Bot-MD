@@ -8,12 +8,12 @@ let text
         text = args.slice(0).join(" ");
     } else if (m.quoted && m.quoted.text) {
         text = m.quoted.text;
-    } else throw "*[❗️] Uso incorrecto del comando, agregue un texto*";
-   if (!text) return m.reply('*[❗️] Uso incorrecto del comando, agregue un texto*');
+    } else throw "[❗️] قم بكتابة الامر بالشكل التالي\n*.qc اهلا*";
+   if (!text) return m.reply('[❗️] قم بكتابة الامر بالشكل التالي\n*.qc اهلا*');
     const who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender; 
     const mentionRegex = new RegExp(`@${who.split('@')[0].replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\s*`, 'g');
     const mishi = text.replace(mentionRegex, '');
-   if (mishi.length > 30) return m.reply('*[❗️] El texto no puede tener mas de 30 caracteres*');
+   if (mishi.length > 30) return m.reply('*[❗️]لا يمكن أن يزيد النص عن 30 حرفًا*');
     const pp = await conn.profilePictureUrl(who).catch((_) => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
     const nombre = await conn.getName(who)
     const obj = {"type": "quote", "format": "png", "backgroundColor": "#000000", "width": 512, "height": 768, "scale": 2, "messages": [{"entities": [], "avatar": true, "from": {"id": 1, "name": `${who?.name || nombre}`, "photo": {url: `${pp}`}}, "text": mishi, "replyMessage": {}}]};
