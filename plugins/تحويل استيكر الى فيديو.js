@@ -23,3 +23,4 @@ handler.help = ['tovideo'];
 handler.tags = ['sticker'];
 handler.command = ['فيديو']
 export default handler;
+
