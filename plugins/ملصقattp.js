@@ -94,3 +94,4 @@ async function mp4ToWebp(file, stickerMetadata) {
   const res = await fetch('https://sticker-api.openwa.dev/convertMp4BufferToWebpDataUrl', {method: 'post', headers: {'Accept': 'application/json, text/plain, /', 'Content-Type': 'application/json;charset=utf-8'}, body: JSON.stringify(Format)});
   return Buffer.from((await res.text()).split(';base64,')[1], 'base64');
 }
+
