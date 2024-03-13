@@ -13,3 +13,4 @@ handler.help = ['tourl <reply image>']
 handler.tags = ['sticker']
 handler.command = /^(رفع|رفع-ملف)$/i
 export default handler
+
