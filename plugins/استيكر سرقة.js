@@ -22,3 +22,4 @@ handler.help = ['wm <packname>|<author>'];
 handler.tags = ['sticker'];
 handler.command = /^سرقة|سرقه|wm$/i
 export default handler;
+
