@@ -13,3 +13,4 @@ handler.help = ['toimg (reply)'];
 handler.tags = ['sticker'];
 handler.command = ['صوره', 'صورة']
 export default handler;
+
