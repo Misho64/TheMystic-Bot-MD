@@ -16,3 +16,4 @@ const handler = async (m, {conn, text}) => {
 handler.command = /^scircle|circle$/i;
 export default handler;
 /* `https://api.dhamzxploit.my.id/api/canvas/circle?url=${url}` */
+
